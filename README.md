@@ -9,14 +9,6 @@ In BIOS Setup:
 - Intel: Enable Virtualization Technology
 - AMD: Enable SVM mode
 
-## Editor
-
-- [Visual Studio Code](https://code.visualstudio.com/)
-
-## Git
-
-- [GitKraken](https://www.gitkraken.com/)
-
 ---
 
 ## Windows Subsystem for Linux 2
@@ -70,13 +62,13 @@ wsl --set-default-version 2
 
 ### Access
 
-### Accessing Windows Files from Linux
+#### Accessing Windows Files from Linux
 
 ```bash
 cd /mnt/c
 ```
 
-### Accessing Linux Files from Windows
+#### Accessing Linux Files from Windows
 
 1. `Windows logo key` + `R`.
 2. type `\\wsl$\Ubuntu`.
@@ -110,3 +102,55 @@ powershell.exe start .
    1. Kubernetes: Enable Kubernetes.
 4. Apply and Restart.
 
+---
+
+## VS Code
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+### Remote Development
+
+- [Install](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+### Update Linux distribution
+
+In Ubuntu:
+
+```bash
+sudo apt-get update
+sudo apt-get install wget ca-certificates
+```
+
+Restart Ubuntu in Widowns Terminal:
+
+```bash
+wsl --shutdown
+wsl -d Ubuntu
+```
+
+### Open a WSL project in Visual Studio Code
+
+Make a project in Linux:
+
+```bash
+mkdir ~/my-project
+cd ~/my-project
+echo 'hello' > hello
+```
+
+In Linux:
+
+```bash
+code .
+```
+
+In VS Code:
+
+1. `CTRL` + `SHIFT` + `P`
+2. `REMOTE-WSL`
+
+---
+
+## Git
+
+- [GitKraken](https://www.gitkraken.com/)
