@@ -154,3 +154,10 @@ In VS Code:
 ## Git
 
 - [GitKraken](https://www.gitkraken.com/)
+
+---
+
+## Virtual Machines
+
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [Vagrant](https://www.vagrantup.com/downloads)
