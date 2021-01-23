@@ -6,7 +6,12 @@ Windows 10 setup
 
 - [Virtual Machines](#virtual-machines)
 - [WSL2](wsl2.md)
-- [Docker & Kubernetes](docker.desktop.md)
+  - Install Linux
+  - Install Windows Terminal
+  - Edit `hosts`
+  - Access using Windows File Explorer
+- [VS Code](vscode.md): Open a WSL project in Code
+- [Docker & Kubernetes](docker.desktop.md): Docker Desktop
 - Git
   - [GitKraken](https://www.gitkraken.com/)
 

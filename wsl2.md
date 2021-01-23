@@ -41,11 +41,45 @@ wsl --set-default-version 2
 3. From the distribution's page, select "**Get**".
 4. Start `Ubuntu`.
 
+---
+
 ## Install Windows Terminal
 
 - [Install and set up Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/get-started)
 
 1. Install `Windows Terminal` from the Microsoft Store.
+
+---
+
+## Hosts
+
+### Linux
+
+```bash
+ip address | grep eth0
+
+4: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    inet 172.20.235.235/20 brd 172.20.239.255 scope global eth0
+```
+
+Linux's IP: `172.20.235.235`
+
+### Windows
+
+In Windows Powershell, run notepad as Administrator:
+
+```bash
+Start-Process notepad C:\Windows\System32\drivers\etc\hosts -Verb RunAs
+```
+
+Add:
+
+```bash
+# Windows Subsystem for Linux 2
+172.20.235.235 ubuntu.internal
+```
+
+---
 
 ## Access
 
