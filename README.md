@@ -14,6 +14,7 @@ Windows 10 setup
 - [Docker & Kubernetes](docker.desktop.md): Docker Desktop
 - Git
   - [GitKraken](https://www.gitkraken.com/)
+- [Keymap]:(#keymap)
 
 ---
 
@@ -28,3 +29,15 @@ In BIOS Setup:
 
 - Intel: Enable Virtualization Technology
 - AMD: Enable SVM mode
+
+## Keymap
+
+[randyrants/sharpkeys](https://github.com/randyrants/sharpkeys)
+
+### `Caps Lock` to `Escape`
+
+1. Add
+   - Map this key: `Special: Caps Lock(00_3A)`
+   - To this key: `Special: Escape(00_01)`
+1. Write to Registry
+1. Log out or Reboot
