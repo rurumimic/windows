@@ -99,6 +99,8 @@ add-content C:\Windows\System32\drivers\etc\hosts -value "$ubuntu ubuntu.local"
       - Description: WSL set up
       - Run with highest privileges
       - Configure for: Windows 10
+   - Triggers → New
+     - Begin the task: At log on
    - Actions → New
      - Action: Start a program
      - Program/script: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`
