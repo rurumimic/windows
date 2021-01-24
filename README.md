@@ -8,6 +8,7 @@ Windows 10 setup
 - [WSL2](wsl2.md)
   - Install Linux
   - Install Windows Terminal
+  - Static IP
   - Edit `hosts`
   - Access using Windows File Explorer
 - [VS Code](vscode.md): Open a WSL project in Code

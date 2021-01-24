@@ -53,30 +53,79 @@ wsl --set-default-version 2
 
 ## Hosts
 
-### Linux
+### Linux's IP
+
+In Linux:
 
 ```bash
-ip address | grep eth0
+ip addr show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
 
-4: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
-    inet 172.20.235.235/20 brd 172.20.239.255 scope global eth0
+192.168.65.149
 ```
 
-Linux's IP: `172.20.235.235`
+In Powershell:
 
-### Windows
+```bash
+wsl -d Ubuntu -- ip addr show eth0 | select-string -pattern "inet\b" | out-string | %{$_.trim()} | %{($_ -split ' ')[1]} | %{($_ -split '/')[0]} | set-variable -name "ubuntu"
+```
+
+```bash
+# echo $ubuntu
+get-variable -name "ubuntu"
+
+Name      Value
+----      -----
+ubuntu    192.168.65.149
+```
+
+### Windows' hosts
+
+Run Windows Powershell as Administrator:
+
+```bash
+add-content C:\Windows\System32\drivers\etc\hosts -value "`r`n# Windows Subsystem for Linux 2"
+add-content C:\Windows\System32\drivers\etc\hosts -value "$ubuntu ubuntu.local"
+```
+
+### Auto script
+
+[wsl.ps1](ps1/wsl.ps1)
+
+1. Save `wsl.ps1` in `C:\Windows`
+1. Open **Task Scheduler**
+1. Create Task
+   - General
+      - Name: WSL
+      - Description: WSL set up
+      - Run with highest privileges
+      - Configure for: Windows 10
+   - Actions → New
+     - Action: Start a program
+     - Program/script: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`
+     - Add arguments: `-ExecutionPolicy Bypass -File C:\Windows\wsl.ps1`
+   - Conditions
+     - Power
+       - Start the task only if the computer is on AC power: uncheck
+   - Settings
+     - Allow task to be run on demand: check
+     - Do not start a new instance
+2. Taks Scheduler Library
+   - Run the task
+3. `F5` Refresh Task Scheduler
+
+### Verify hosts file
 
 In Windows Powershell, run notepad as Administrator:
 
 ```bash
+cat C:\Windows\System32\drivers\etc\hosts
+# or
 Start-Process notepad C:\Windows\System32\drivers\etc\hosts -Verb RunAs
 ```
 
-Add:
-
 ```bash
 # Windows Subsystem for Linux 2
-172.20.235.235 ubuntu.internal
+192.168.65.149 ubuntu.local
 ```
 
 ---
