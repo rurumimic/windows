@@ -87,9 +87,9 @@ add-content C:\Windows\System32\drivers\etc\hosts -value "`r`n# Windows Subsyste
 add-content C:\Windows\System32\drivers\etc\hosts -value "$ubuntu ubuntu.local"
 ```
 
-### Auto script
+### Auto script: Windows
 
-[wsl.ps1](ps1/wsl.ps1)
+[wsl.ps1](windows/wsl.ps1)
 
 1. Save `wsl.ps1` in `C:\Windows`
 1. Open **Task Scheduler**
@@ -115,6 +115,16 @@ add-content C:\Windows\System32\drivers\etc\hosts -value "$ubuntu ubuntu.local"
    - Run the task
 3. `F5` Refresh Task Scheduler
 
+### Auto script: Linux
+
+[hosts](linux/hosts)
+
+```bash
+sudo vi /etc/init.d/hosts
+sudo chmod 755 /etc/init.d/hosts
+sudo update-rc.d hosts defaults
+```
+
 ### Verify hosts file
 
 In Windows Powershell, run notepad as Administrator:
@@ -127,6 +137,14 @@ Start-Process notepad C:\Windows\System32\drivers\etc\hosts -Verb RunAs
 
 ```bash
 # Windows Subsystem for Linux 2
+192.168.65.149 ubuntu.local
+```
+
+In Linux:
+
+```bash
+cat /etc/hosts
+
 192.168.65.149 ubuntu.local
 ```
 

@@ -1,0 +1,19 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          hosts
+# Required-Start:    $network
+# Required-Stop:
+# Default-Start:     3 4 5
+# Default-Stop:
+### END INIT INFO
+
+LOCALHOST=$(ip addr show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1)
+
+case "$1" in
+  start)
+    sed -i "s/.*ubuntu.local/$LOCALHOST ubuntu.local/g" /etc/hosts
+    ;;
+  *)
+    echo "ubuntu.local: $LOCALHOST"
+    ;;
+esac
