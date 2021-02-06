@@ -23,8 +23,16 @@ Windows 10 setup
 
 - [Vagrant](https://www.vagrantup.com/downloads)
   - plugin: [vmware](https://www.vagrantup.com/vmware). $79 per seat.
-- VMWare: [Fusion](https://www.vmware.com/products/fusion.html), [Workstation Player](https://www.vmware.com/products/workstation-player.html)
+- VMware: [Fusion](https://www.vmware.com/products/fusion.html), [Workstation Player](https://www.vmware.com/products/workstation-player.html)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+### Vagrant + VMware
+
+```bash
+vagrant plugin install vagrant-vmware-desktop
+vagrant plugin license vagrant-vmware-desktop ~/license.lic
+vagrant plugin list
+```
 
 ### Set Virtualization
 
