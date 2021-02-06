@@ -21,8 +21,10 @@ Windows 10 setup
 
 ## Virtual Machines
 
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - [Vagrant](https://www.vagrantup.com/downloads)
+  - plugin: [vmware](https://www.vagrantup.com/vmware). $79 per seat.
+- VMWare: [Fusion](https://www.vmware.com/products/fusion.html), [Workstation Player](https://www.vmware.com/products/workstation-player.html)
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 ### Set Virtualization
 
