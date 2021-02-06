@@ -4,10 +4,13 @@ Windows 10 setup
 
 ## Contents
 
+- [Chocolatey](https://chocolatey.org/): Package manager
+- [Termianl](#termianl)
+  - Windows Terminal
+  - Hyper
 - [Virtual Machines](#virtual-machines)
 - [WSL2](wsl2.md)
   - Install Linux
-  - Install Windows Terminal
   - Static IP
   - Edit `hosts`
   - Access using Windows File Explorer
@@ -18,6 +21,25 @@ Windows 10 setup
 - [Keymap]:(#keymap)
 
 ---
+
+## Termianl
+
+### Windows Terminal
+
+- [Install and set up Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/get-started)
+
+1. Install `Windows Terminal` from the Microsoft Store.
+
+### Hyper
+
+- [Hyper](https://hyper.is/)
+- [github](https://github.com/vercel/hyper)
+
+Open PowerShell as **Administrator** and run:
+
+```bash
+choco install hyper
+```
 
 ## Virtual Machines
 
@@ -30,7 +52,7 @@ Windows 10 setup
 
 ```bash
 vagrant plugin install vagrant-vmware-desktop
-vagrant plugin license vagrant-vmware-desktop ~/license.lic
+vagrant plugin license vagrant-vmware-desktop $HOME/license.lic
 vagrant plugin list
 ```
 

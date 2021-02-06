@@ -43,14 +43,6 @@ wsl --set-default-version 2
 
 ---
 
-## Install Windows Terminal
-
-- [Install and set up Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/get-started)
-
-1. Install `Windows Terminal` from the Microsoft Store.
-
----
-
 ## Access
 
 ### Accessing Windows Files from Linux
