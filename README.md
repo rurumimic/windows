@@ -48,6 +48,12 @@ choco install hyper
 - VMware: [Fusion](https://www.vmware.com/products/fusion.html), [Workstation Player](https://www.vmware.com/products/workstation-player.html)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
+### Vagrant
+
+```bash
+vagrant plugin install vagrant-vbguest
+```
+
 ### Vagrant + VMware
 
 ```bash
