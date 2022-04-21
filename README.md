@@ -44,6 +44,7 @@ choco install hyper
 ## Virtual Machines
 
 - [Vagrant](https://www.vagrantup.com/downloads)
+  - [WSL](https://www.vagrantup.com/docs/other/wsl)
   - plugin: [vmware](https://www.vagrantup.com/vmware). $79 per seat.
 - VMware: [Fusion](https://www.vmware.com/products/fusion.html), [Workstation Player](https://www.vmware.com/products/workstation-player.html)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -52,6 +53,13 @@ choco install hyper
 
 ```bash
 vagrant plugin install vagrant-vbguest
+```
+
+```bash
+vi ~/.bashrc
+
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+export PATH="$PATH:/mnt/c/Program\ Files/Oracle/VirtualBox"
 ```
 
 ### Vagrant + VMware
