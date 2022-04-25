@@ -56,18 +56,6 @@ on PowerShell:
 ```bash
 vagrant plugin install vagrant-vbguest
 vagrant up
-```
-
-###### (not working) on WSL2
-
-```bash
-vi ~/.bashrc
-
-export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
-export PATH="$PATH:/mnt/c/Program\ Files/Oracle/VirtualBox"
-```
-
-```bash
 vagrant ssh
 ```
 
