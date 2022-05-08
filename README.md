@@ -46,6 +46,8 @@ choco install hyper
 - [Vagrant](https://www.vagrantup.com/downloads)
   - [WSL](https://www.vagrantup.com/docs/other/wsl)
   - plugin: [vmware](https://www.vagrantup.com/vmware). $79 per seat.
+  - [Vagrant VMware Utility](https://www.vagrantup.com/vmware/downloads)
+  - [Default Provider](https://www.vagrantup.com/docs/providers/basic_usage#default-provider)
 - VMware: [Fusion](https://www.vmware.com/products/fusion.html), [Workstation Player](https://www.vmware.com/products/workstation-player.html)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
@@ -60,11 +62,29 @@ vagrant ssh
 ```
 
 ### Vagrant + VMware
-
 ```bash
 vagrant plugin install vagrant-vmware-desktop
 vagrant plugin license vagrant-vmware-desktop $HOME/license.lic
 vagrant plugin list
+```
+
+#### Usage
+
+```bash
+Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/bionic64"
+
+  config.vm.provider "vmware_desktop" do |vb|
+    vb.gui = false
+    vb.cpus = 2
+    vb.memory = "1024"
+  end
+
+  # config.vm.provider "virtualbox" do |vb|
+  #   vb.gui = true
+  #   vb.memory = "1024"
+  # end
+end
 ```
 
 ### Set Virtualization
