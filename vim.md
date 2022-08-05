@@ -6,7 +6,9 @@
 
 Download for X64: `https://aka.ms/vs/17/release/vc_redist.x64.exe`
 
-## Python
+## Languages
+
+### Python
 
 - [download](https://www.python.org/downloads/)
 - [3.10.6](https://www.python.org/downloads/release/python-3106/)
@@ -14,6 +16,10 @@ Download for X64: `https://aka.ms/vs/17/release/vc_redist.x64.exe`
 ```bash
 ls $HOME\AppData\Local\Programs\Python\Python310
 ```
+
+### Node
+
+- [download](https://nodejs.org/ko/download/)
 
 ## NeoVim
 
@@ -53,3 +59,22 @@ nvim
 - INFO: pynvim version: 0.4.3
 - OK: Latest pynvim is installed.
 ```
+
+### init.toml
+
+```bash
+nvim $HOME\.SpaceVim.d\init.toml
+```
+
+```toml
+```
+
+### Languages
+
+#### Rust
+
+```bash
+:CocInstall coc-rust-analyzer
+```
+
+- [rustfmt](https://github.com/rust-lang/rustfmt/releases)
