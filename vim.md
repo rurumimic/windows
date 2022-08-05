@@ -11,6 +11,10 @@ Download for X64: `https://aka.ms/vs/17/release/vc_redist.x64.exe`
 - [download](https://www.python.org/downloads/)
 - [3.10.6](https://www.python.org/downloads/release/python-3106/)
 
+```bash
+ls 
+```
+
 ## NeoVim
 
 - [neovim](https://github.com/neovim/neovim)
@@ -22,6 +26,26 @@ Download for X64: `https://aka.ms/vs/17/release/vc_redist.x64.exe`
 
 ```bash
 mkdir -p $home\AppData\Local\nvim
+```
+
+```bash
+nvim
+:checkhealth
+```
+
+### Python
+
+```bash
+pip install greenlet-1.1.2-cp310-cp310-win_amd64.whl msgpack-1.0.4-cp310-cp310-win_amd64.whl pynvim-0.4.3.tar.gz
+```
+
+```bash
+nvim $home\AppData\Local\nvim\init.vim
+```
+
+```bash
+let g:python3_host_prog='C:\Users\admin\AppData\Local\Programs\Python\Python310\python.exe'
+let g:python_host_prog='C:\Users\admin\AppData\Local\Programs\Python\Python310\python.exe'
 ```
 
 ### (option) Spell
