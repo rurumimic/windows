@@ -12,7 +12,7 @@ Download for X64: `https://aka.ms/vs/17/release/vc_redist.x64.exe`
 - [3.10.6](https://www.python.org/downloads/release/python-3106/)
 
 ```bash
-ls 
+ls $HOME\AppData\Local\Programs\Python\Python310
 ```
 
 ## NeoVim
@@ -24,14 +24,10 @@ ls
 - `nvim-win64.zip`
 - `nvim-win64.msi`: default path `C:\Program Files\Neovim\bin`
 
-```bash
-mkdir -p $home\AppData\Local\nvim
-```
+## SpaceVim
 
-```bash
-nvim
-:checkhealth
-```
+- [spacevim](https://spacevim.org/)
+- [install](https://spacevim.org/quick-start-guide/#windows)
 
 ### Python
 
@@ -40,28 +36,20 @@ pip install greenlet-1.1.2-cp310-cp310-win_amd64.whl msgpack-1.0.4-cp310-cp310-w
 ```
 
 ```bash
-nvim $home\AppData\Local\nvim\init.vim
+export PYTHON_HOST_PROG='$HOME\AppData\Local\Programs\Python\Python310\python.exe'
+export PYTHON3_HOST_PROG='$HOME\AppData\Local\Programs\Python\Python310\python.exe'
 ```
 
 ```bash
-let g:python3_host_prog='C:\Users\admin\AppData\Local\Programs\Python\Python310\python.exe'
-let g:python_host_prog='C:\Users\admin\AppData\Local\Programs\Python\Python310\python.exe'
+nvim
+:checkhealth
 ```
-
-### (option) Spell
 
 ```bash
-mkdir -p $home\AppData\Local\nvim\site\spell
-ii $home\AppData\Local\nvim\site\spell
+## Python 3 provider (optional)
+- INFO: Using: g:python3_host_prog = "$HOME\AppData\Local\Programs\Python\Python310\python.exe"
+- INFO: Executable: C:\Users\admin\AppData\Local\Programs\Python\Python310\python.exe
+- INFO: Python version: 3.10.6
+- INFO: pynvim version: 0.4.3
+- OK: Latest pynvim is installed.
 ```
-
-Save [en.utf-8.spl](https://github.com/vim/vim/blob/master/runtime/spell/en.utf-8.spl) and 
-[en.utf-8.sug](https://github.com/vim/vim/blob/master/runtime/spell/en.utf-8.sug)
-
-## SpaceVim
-
-- [spacevim](https://spacevim.org/)
-- [install](https://spacevim.org/quick-start-guide/#windows)
-
-
-
