@@ -67,6 +67,88 @@ nvim $HOME\.SpaceVim.d\init.toml
 ```
 
 ```toml
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    autocomplete_method = "coc"
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "dracula"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    enabled_formater = "prettier"
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = 'ssh'
+
+[[layers]]
+name = 'colorscheme'
+
+[[layers]]
+name = 'git'
+
+[[layers]]
+name = 'versioncontrol'
+
+[[layers]]
+name = 'format'
+format_on_save = true
+
+[[layers]]
+name = 'fzf'
+
+[[layers]]
+name = 'tools'
+
+[[layers]]
+name = 'markdown'
+
+[[layers]]
+name = 'lang#rust'
+
+[[layers]]
+name = 'lang#python'
+python_interpreter = '$HOME\AppData\Local\Programs\Python\Python310\python.exe'
+
+[[layers]]
+name = 'lang#java'
+
+[[layers]]
+name = 'lang#go'
+
+[[layers]]
+name = 'lang#javascript'
+
+[[layers]]
+name = 'lang#typescript'
 ```
 
 ### Languages
@@ -78,3 +160,9 @@ nvim $HOME\.SpaceVim.d\init.toml
 ```
 
 - [rustfmt](https://github.com/rust-lang/rustfmt/releases)
+
+#### Go
+
+```bash
+:GoInstallBinaries
+```
